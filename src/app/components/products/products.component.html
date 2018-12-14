@@ -1,0 +1,79 @@
+<!-- <p>
+  products works!
+</p>
+<h1>Products</h1>
+  <h2>Products</h2>
+  <ul>
+    <li *ngFor="let product of products">{{product.name}}</li>
+  </ul> -->
+
+  <h3>Products</h3>
+  <div class="grid grid-pad">
+    <a *ngFor="let product of products" class="col-1-4"
+        routerLink="/detail/{{product.id}}">
+      <div class="module product">
+        <h4>{{product.name}}</h4>
+        
+        <!-- <div id="catalog" class="container">
+          <ul class="nav nav-pills">
+            <li class="active">
+              <a href="#1a" data-toggle="tab">Catalog</a>
+            </li>
+            <li><a href="#2a" data-toggle="tab">Order</a>
+            </li>
+          </ul>
+        
+          <div class="tab-content clearfix">
+            <div class="tab-pane active" id="1a">
+              <h3>Catalog</h3>
+            </div>
+            <div class="tab-pane" id="2a">
+              <h3>Order</h3>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </a>
+  </div>
+
+  <h3>New Product</h3>
+<div>
+    <label>Name: 
+        <input #name />
+      </label>
+      <p></p>
+  <label>Price: 
+    <input #price />
+  </label>
+  <p></p>
+  <label>depth min:
+    <input #depthmin />
+  </label>
+  <p></p>
+  <label>depth max:
+    <input #depthmax />
+  </label>
+  <p></p>
+  <label>length min:
+    <input #lengthmin />
+  </label>
+  <p></p>
+  <label>length max:
+    <input #lengthmax />
+  </label>
+  <p></p>
+  <label>height min:
+    <input #heightmin />
+  </label>
+  <p></p>
+  <label>height max:
+    <input #heightmax />
+  </label>
+  <p></p>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="add(name.value, price.value, depthmin.value, depthmax.value, lengthmin.value, lengthmax.value, heightmin.value, heightmax.value);">
+    add
+  </button>
+</div>
+
+ 

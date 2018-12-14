@@ -1,0 +1,42 @@
+<div *ngIf="aggregation">
+    <h2>{{aggregation[0].productParent }} Father Product</h2>
+    <h2>{{aggregation[0].productChild }} Child Product</h2>
+    <div>
+        <label>min percentage:
+            <input [(ngModel)]="aggregation[0].minPercentage" placeholder="minPercentage" />
+        </label>
+    </div>
+    <div>
+        <label>max percentage:
+            <input [(ngModel)]="aggregation[0].maxPercentage" placeholder="maxPercentage" />
+        </label>
+    </div>
+    <div>
+        <label>type of aggregation:
+            <input [(ngModel)]="aggregation[0].type" placeholder="type" />
+        </label>
+    </div>
+    <div>
+        <label>same material required:
+            <input [(ngModel)]="aggregation[0].sameMaterialRequired" placeholder="sameMaterialRequired" />
+        </label>
+    </div>
+
+
+
+
+    <!-- <div>
+      <label>name:
+        <input [(ngModel)]="product.name" placeholder="name"/>
+      </label>
+    </div>
+    <div>
+      <label>price:
+          <input [(ngModel)]="product.price" placeholder="price"/>
+      </label>
+    </div> -->
+
+    <button (click)="goBack()">go back</button>
+    <button (click)="save()">save</button>
+    <button (click)="delete()">delete</button>
+</div>

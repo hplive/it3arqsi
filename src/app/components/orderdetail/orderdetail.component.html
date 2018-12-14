@@ -1,0 +1,60 @@
+<div *ngIf="order">
+    <h2>{{order.name | uppercase}}</h2>
+    <div><span>id: </span>{{order._id}}</div>
+    <div>
+        <label>height:
+            <input [(ngModel)]="order.item.height" placeholder="height"/>
+        </label>
+      </div>
+      <div>
+          <label>length:
+              <input [(ngModel)]="order.item.length" placeholder="length"/>
+          </label>
+        </div>
+        <div>
+            <label>depth:
+                <input [(ngModel)]="order.item.depth" placeholder="depth"/>
+            </label>
+          </div>
+
+
+    <a *ngFor="let item of order.itemProduct" class="col-1-4">
+        <div class="module product">
+          <h4>{{item.name}} (id: {{item.id}})</h4>
+          <div>
+              <label>height:
+                  <input [(ngModel)]="item.height" placeholder="height"/>
+              </label>
+            </div>
+            <div>
+                <label>length:
+                    <input [(ngModel)]="item.length" placeholder="length"/>
+                </label>
+              </div>
+              <div>
+                  <label>depth:
+                      <input [(ngModel)]="item.depth" placeholder="depth"/>
+                  </label>
+                </div>
+        </div>
+      </a>
+
+
+
+    
+    <!-- <div>
+      <label>name:
+        <input [(ngModel)]="product.name" placeholder="name"/>
+      </label>
+    </div>
+    <div>
+      <label>price:
+          <input [(ngModel)]="product.price" placeholder="price"/>
+      </label>
+    </div> -->
+      
+    <button (click)="goBack()">go back</button>
+    <button (click)="save()">save</button>
+    <button (click)="delete()">delete</button>
+  </div>
+ 

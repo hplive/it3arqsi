@@ -1,0 +1,51 @@
+<div *ngIf="product">
+    <h2>{{product.name | uppercase}} Details</h2>
+    <div><span>id: </span>{{product.id}}</div>
+    <div><span>price: </span>{{product.price}}</div>
+    <div><span>cathegory id: </span>{{product.cathegoryId}}</div>
+    <div>
+        <label>depth min:
+            <input [(ngModel)]="product.depthMin" placeholder="depthMin"/>
+        </label>
+      </div>
+      <div>
+          <label>depth max:
+              <input [(ngModel)]="product.depthMax" placeholder="depthMax"/>
+          </label>
+        </div>
+        <div>
+            <label>length min:
+                <input [(ngModel)]="product.lengthMin" placeholder="lengthMin"/>
+            </label>
+          </div>
+          <div>
+              <label>length max:
+                  <input [(ngModel)]="product.lengthMax" placeholder="lengthMax"/>
+              </label>
+            </div>
+            <div>
+                <label>height min:
+                    <input [(ngModel)]="product.heightMin" placeholder="heightMin"/>
+                </label>
+              </div>
+              <div>
+                  <label>height max:
+                      <input [(ngModel)]="product.heightMax" placeholder="heightMax"/>
+                  </label>
+                </div>
+    <!-- <div>
+      <label>name:
+        <input [(ngModel)]="product.name" placeholder="name"/>
+      </label>
+    </div>
+    <div>
+      <label>price:
+          <input [(ngModel)]="product.price" placeholder="price"/>
+      </label>
+    </div> -->
+      
+    <button (click)="goBack()">go back</button>
+    <button (click)="save()">save</button>
+    <button (click)="delete()">delete</button>
+  </div>
+ 

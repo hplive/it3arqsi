@@ -1,0 +1,69 @@
+<h3>Orders</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let order of orders" class="col-1-4" routerLink="/orderdetail/{{order._id}}">
+    <div class="module product">
+      <h4>{{order.name}} (id: {{order._id}})</h4>
+
+    </div>
+  </a>
+</div>
+
+<h3>New Order</h3>
+<div>
+  <label>Name:
+    <input #name />
+  </label>
+  <p></p>
+
+
+  <h3>Item</h3>
+  <label>Id:
+    <input #productParentId />
+  </label>
+  <p></p>
+  <label>Name:
+      <input #productParentName />
+    </label>
+    <p></p>
+  <label>depth:
+    <input #depthParent />
+  </label>
+  <p></p>
+  <label>length:
+    <input #lengthParent />
+  </label>
+  <p></p>
+  <label>height:
+    <input #heightParent />
+  </label>
+  <p></p>
+
+
+
+
+
+  <h3>Item Products</h3>
+  <label>Id:
+    <input #productChildId1 />
+  </label>
+  <p></p>
+  <label>Name:
+      <input #productChildName1 />
+    </label>
+    <p></p>
+  <label>depth:
+    <input #depthChild1 />
+  </label>
+  <p></p>
+  <label>length:
+    <input #lengthChild1 />
+  </label>
+  <p></p>
+  <label>height:
+    <input #heightChild1 />
+  </label>
+  <p></p>
+  <button (click)="add(name.value, productParentId.value, productParentName.value, depthParent.value, lengthParent.value, heightParent.value, productChildId1.value, productChildName1.value, depthChild1.value, lengthChild1.value, heightChild1.value);">
+      add
+    </button>
+ 

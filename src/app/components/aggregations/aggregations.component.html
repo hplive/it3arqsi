@@ -1,0 +1,41 @@
+<h3>Aggregations (Parent/Child)</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let aggregation of aggregations" class="col-1-4"
+  routerLink="/detail/{{aggregation.productParent}}/{{aggregation.productChild}}">
+    <div class="module aggregation">
+      <h4>Product {{aggregation.productParent}}/ Product {{aggregation.productChild}}</h4>
+    </div>
+  </a>
+</div>
+
+<h3>New Aggregation</h3>
+<div>
+  <label>Product Parent Id:
+    <input #productParent />
+  </label>
+  <p></p>
+  <label>Product Child Id:
+    <input #productChild />
+  </label>
+  <p></p>
+  <label>Min Percentage:
+    <input #minPercentage />
+  </label>
+  <p></p>
+  <label>Max Percentage:
+    <input #maxPercentage />
+  </label>
+  <p></p>
+  <label>Aggregation Obrigatory:
+    <input #type />
+  </label>
+  <p></p>
+  <label>Same material required:
+    <input #sameMaterialRequired />
+  </label>
+  <p></p>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="add(productParent.value, productChild.value, minPercentage.value, maxPercentage.value, type.value, sameMaterialRequired.value);">
+    add
+  </button>
+</div>
